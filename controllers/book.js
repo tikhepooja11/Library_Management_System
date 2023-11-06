@@ -47,9 +47,7 @@ const updateBook = (req, res) => {
   return bookModel
     .findByIdAndUpdate(bookId, bookUpdate, { new: true })
     .then((book) => res.send(book))
-    .catch((error) =>
-      res.status(404).json({ message: "book id not found" }).send(error)
-    );
+    .catch((error) => res.status(404).json({ message: "book id not found" }));
 };
 
 const deleteBook = function (req, res) {

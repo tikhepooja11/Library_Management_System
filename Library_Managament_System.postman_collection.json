@@ -1,0 +1,254 @@
+{
+  "info": {
+    "_postman_id": "6a55efdb-2ec7-47ca-a6fb-d633a300d90a",
+    "name": "Library_Managament_System",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "add-book",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": {
+            "title": "To Kill a Mockingbird",
+            "author": "Harper Lee",
+            "summary": "This classic novel explores themes of racism and injustice in a small Southern town through the eyes of a young girl named Scout Finch. Her father, Atticus Finch, serves as a moral compass and lawyer defending an innocent Black man accused of rape."
+          },
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/bookRoute/addBook",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["bookRoute/addBook"]
+        }
+      },
+      "response": [
+        {
+          "title": "To Kill a Mockingbird",
+          "author": "Harper Lee",
+          "summary": "This classic novel explores themes of racism and injustice in a small Southern town through the eyes of a young girl named Scout Finch. Her father, Atticus Finch, serves as a moral compass and lawyer defending an innocent Black man accused of rape.",
+          "_id": "6548f6cdde109b9f34983f30",
+          "__v": 0
+        }
+      ]
+    },
+    {
+      "name": "view-all-books",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": {},
+          "options": {}
+        },
+        "url": {
+          "raw": "http://localhost:3000/bookRoute/viewAllBooks",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["bookRoute/viewAllBooks"]
+        }
+      },
+
+      "response": [
+        [
+          {
+            "_id": "6548ee71f5bc1dc7b96307e3",
+            "title": "NUMBER THE STARS",
+            "author": "LOIS LOWRY",
+            "summary": "Although she’s most famous for her dystopian novel The Giver, Lowry’s 1989 novel Number the Stars focuses on the life of a Jewish family living in Copenhagen during World War II. In line 147:4, the Psalms declares that He [God] telleth the number of the stars; he calleth them all by their names. The quotation is also used for its connotations of the Star of David associated with Judaism.",
+            "__v": 0
+          },
+          {
+            "_id": "6548f669de109b9f34983f2c",
+            "title": "THE SUN ALSO RISES",
+            "author": "ERNEST HEMINGWAY",
+            "summary": "More Ecclesiastes! This particular quotation is from 1:5, which states that The sun also ariseth, and the sun goeth down, and hasteth to his place where he arose. Hemingway’s modernist novel came out in 1926.",
+            "__v": 0
+          },
+          {
+            "_id": "6548f6cdde109b9f34983f30",
+            "title": "To Kill a Mockingbird",
+            "author": "Harper Lee",
+            "summary": "This classic novel explores themes of racism and injustice in a small Southern town through the eyes of a young girl named Scout Finch. Her father, Atticus Finch, serves as a moral compass and lawyer defending an innocent Black man accused of rape.",
+            "__v": 0
+          }
+        ]
+      ]
+    },
+    {
+      "name": "get-book-by-id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": {},
+          "options": {}
+        },
+        "url": {
+          "raw": "http://localhost:3000/bookRoute/getBookById/6548ee71f5bc1dc7b96307e3",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["bookRoute/getBookById"]
+        }
+      },
+      "response": [
+        {
+          "_id": "6548ee71f5bc1dc7b96307e3",
+          "title": "NUMBER THE STARS",
+          "author": "LOIS LOWRY",
+          "summary": "Although she’s most famous for her dystopian novel The Giver, Lowry’s 1989 novel Number the Stars focuses on the life of a Jewish family living in Copenhagen during World War II. In line 147:4, the Psalms declares that He [God] telleth the number of the stars; he calleth them all by their names. The quotation is also used for its connotations of the Star of David associated with Judaism.",
+          "__v": 0
+        }
+      ]
+    },
+    {
+      "name": "delete-book-by-id",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": {},
+          "options": {}
+        },
+        "url": {
+          "raw": "http://localhost:3000/bookRoute/deleteBook/6548f4b9c03a628d04b827de",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["bookRoute/deleteBook"]
+        }
+      },
+      "response": [
+        {
+          "message": "Book deleted"
+        }
+      ]
+    },
+    {
+      "name": "update-book",
+      "request": {
+        "method": "PATCH",
+        "header": []
+      },
+      "body": {
+        "mode": "raw",
+        "raw": {
+          "title": "NUMBER THE STARS UPDATED"
+        },
+        "options": {
+          "raw": {
+            "language": "json"
+          }
+        }
+      },
+      "url": {
+        "raw": "http://localhost:3000/bookRoute/updateBook/6548ee71f5bc1dc7b96307e3",
+        "protocol": "http",
+        "host": ["localhost"],
+        "port": "3000",
+        "path": ["bookRoute/updateBook"]
+      },
+      "response": [
+        {
+          "_id": "6548ee71f5bc1dc7b96307e3",
+          "title": "NUMBER THE STARS UPDATED",
+          "author": "LOIS LOWRY",
+          "summary": "Although she’s most famous for her dystopian novel The Giver, Lowry’s 1989 novel Number the Stars focuses on the life of a Jewish family living in Copenhagen during World War II. In line 147:4, the Psalms declares that He [God] telleth the number of the stars; he calleth them all by their names. The quotation is also used for its connotations of the Star of David associated with Judaism.",
+          "__v": 0
+        }
+      ]
+    },
+    {
+      "name": "get-book-by-id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": {},
+          "options": {}
+        },
+        "url": {
+          "raw": "http://localhost:3000/bookRoute/getBookById/6548ee71f5bc1dc7b96307e31",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["bookRoute/getBookById"]
+        }
+      },
+      "response": [
+        {
+          "message": "book id not found"
+        }
+      ]
+    },
+    {
+      "name": "update-book",
+      "request": {
+        "method": "PATCH",
+        "header": []
+      },
+      "body": {
+        "mode": "raw",
+        "raw": {
+          "title": "NUMBER THE STARS"
+        },
+        "options": {
+          "raw": {
+            "language": "json"
+          }
+        }
+      },
+      "url": {
+        "raw": "http://localhost:3000/bookRoute/updateBook/6548ee71f5bc1dc7b96307e31",
+        "protocol": "http",
+        "host": ["localhost"],
+        "port": "3000",
+        "path": ["bookRoute/updateBook"]
+      },
+      "response": [
+        {
+          "message": "book id not found"
+        }
+      ]
+    },
+    {
+      "name": "delete-book-by-id",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": {},
+          "options": {}
+        },
+        "url": {
+          "raw": "http://localhost:3000/bookRoute/deleteBook/6548f4b9c03a628d04b827de1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["bookRoute/deleteBook"]
+        }
+      },
+      "response": [
+        {
+          "message": "Book id not found, Please enter correct book ID !!!  "
+        }
+      ]
+    }
+  ]
+}
