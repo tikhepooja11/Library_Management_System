@@ -18,8 +18,10 @@ mongoose
     console.log(error);
   });
 
+const PORT = process.env.PORT || 3030;
+
 router.listen(3000, () => {
-  console.log(`server started on port 3000`);
+  console.log(`server started on port : ${PORT}`);
 });
 
 router.use(express.urlencoded({ extended: true }));
