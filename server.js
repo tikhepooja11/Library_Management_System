@@ -21,10 +21,9 @@ mongoose
 
 const PORT = process.env.PORT || 3030;
 
-router.listen(3000, () => {
+router.listen(PORT, () => {
   console.log(`server started on port : ${PORT}`);
 });
-console.log("pooja:" + process.env.PORT);
 
 router.use(express.urlencoded({ extended: true }));
 router.use(express.json());
