@@ -23,6 +23,7 @@ const PORT = process.env.PORT || 3030;
 
 router.listen(PORT, () => {
   console.log(`server started on port : ${PORT}`);
+  document.write("Welcome to Library Management system - CRUD Node js app");
 });
 
 router.use(express.urlencoded({ extended: true }));
