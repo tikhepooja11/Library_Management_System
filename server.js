@@ -23,14 +23,13 @@ const PORT = process.env.PORT || 3030;
 
 router.listen(PORT, () => {
   console.log(`server started on port : ${PORT}`);
-  document.write("Welcome to Library Management system - CRUD Node js app");
 });
 
 router.use(express.urlencoded({ extended: true }));
 router.use(express.json());
 
 router.get("/ping", function (req, res) {
-  res.send("api working");
+  res.send("Welcome to Library Management system - CRUD Node js app");
 });
 
 router.use("/bookRoute", bookRoute);
